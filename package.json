@@ -1,12 +1,42 @@
 {
-  "name": "learn-travis-Lucas",
-  "description": "Simple Travis-CI check for JSHint (Code Linting)",
-  "author": "your name here :-)",
-  "version": "0.0.1",
+  "private": true,
+  "index": "primitives.js",
+  "tests": [
+    {
+      "name": "primitives",
+      "tags": [
+        "basics",
+        "declaration"
+      ]
+    },
+    {
+      "name": "arr",
+      "tags": [
+        "basics",
+        "declaration"
+      ]
+    },
+    {
+      "name": "obj",
+      "tags": [
+        "basics",
+        "declaration"
+      ]
+    },
+    {
+      "name": "id",
+      "tags": [
+        "basics",
+        "declaration",
+        "function"
+      ]
+    }
+  ],
+  "scripts": {
+    "update": "git reset && git stash && git pull https://github.com/nan-ci/js.git master && git stash pop",
+    "test": "./tester"
+  },
   "devDependencies": {
     "jshint": "^2.10.1"
-  },
-  "scripts": {
-    "test": "jshint hello.js"
   }
 }
