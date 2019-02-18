@@ -11,13 +11,16 @@
 // Your code :
 
 function multiply (number1, number2){
-    let total = 0;
+    if(number2<0){
+        number2=-number2;
+        number1=-number1;
+    }
+    let total = number1;
     if (number1 === 0 || number2 === 0){
         return 0;
     }
-    let i = 1;
-    while( i > number2){
-        total = total + number1;
+    for(var i = 0; i < number2 - 1; i++){
+        total += number1
     }
     return total;
 }
